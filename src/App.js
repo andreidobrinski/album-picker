@@ -42,17 +42,21 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-          <br></br>
-        <label>
-        {this.state.albumTitle}
-        </label>
-          <br></br>
-        <label>
-        {this.state.artist}
-        </label>
-          <br></br>
+        <br />
+
+        <div>
+          <label>
+            {this.state.albumTitle}
+          </label>
+          <br />
+
+          <label>
+            {this.state.artist}
+          </label>
+        </div>
+
         <button onClick={this.randomAlbum.bind(this)}>
-        button
+          Randomize!
         </button>
       </div>
     );
