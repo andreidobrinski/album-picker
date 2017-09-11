@@ -19,8 +19,8 @@ class App extends Component {
     super();
     this.randomAlbum = this.randomAlbum.bind(this);
     this.state = {
-      albumTitle: "albumTitle",
-      artist: "artist"
+      albumTitle: "",
+      artist: ""
     }
   }
 
@@ -28,7 +28,6 @@ class App extends Component {
     this.ralbum = Math.floor(Math.random() * albums.length);
     const newAlbumTitle = albums[this.ralbum].albumTitle;
     const newArtist = albums[this.ralbum].artist;
-    //var randomizeAlbum = Math.floor(Math.random() * albums.length);
     this.setState({
       albumTitle: newAlbumTitle,
       artist: newArtist
@@ -38,26 +37,33 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <br />
 
-        <div>
-          <label>
-            {this.state.albumTitle}
-          </label>
-          <br />
+        <div className="view">
 
-          <label>
-            {this.state.artist}
-          </label>
+          <div className="label-box">
+
+            <p className="label-text">
+              {this.state.albumTitle}
+            </p>
+
+            <p className="label-text">
+              {this.state.artist}
+            </p>
+            
+          </div>
+
+          <button className="button"
+          onClick={this.randomAlbum.bind(this)}>
+            Randomize!
+          </button>
+
         </div>
 
-        <button onClick={this.randomAlbum.bind(this)}>
-          Randomize!
-        </button>
       </div>
     );
   }
