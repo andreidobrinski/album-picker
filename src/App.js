@@ -45,8 +45,10 @@ class App extends Component {
               {this.state.artist}
             </p>
           </div>
-          <button className="button"
-          onClick={this.randomAlbum.bind(this)}>
+          <button
+            onClick={() => this.randomAlbum()}
+            className="button"
+          >
             Randomize!
           </button>
         </div>
