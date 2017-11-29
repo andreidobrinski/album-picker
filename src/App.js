@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 const albums = [
@@ -37,33 +36,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-
         <div className="view">
-
           <div className="label-box">
-
             <p className="label-text">
               {this.state.albumTitle}
             </p>
-
             <p className="label-text">
               {this.state.artist}
             </p>
-            
           </div>
-
           <button className="button"
           onClick={this.randomAlbum.bind(this)}>
             Randomize!
           </button>
-
         </div>
-
       </div>
     );
   }
