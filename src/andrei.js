@@ -1,4 +1,4 @@
-const Albums = [
+const Andrei = [
   {albumTitle: "By The Way",
   artist: "Red Hot Chili Peppers"
   },
@@ -10,4 +10,4 @@ const Albums = [
   }
   ];
 
-  export default Albums;
+  export default Andrei;

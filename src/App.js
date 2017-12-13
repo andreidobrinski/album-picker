@@ -1,26 +1,43 @@
 import React, { Component } from 'react';
-import Albums from './albums';
+import Andrei from './andrei';
+import Amanda from './amanda';
 import Labels from './components/labels';
+import CuratorLabel from './components/curator-label';
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super();
     this.randomAlbum = this.randomAlbum.bind(this);
+    this.changeCurator - this.changeCurator.bind(this);
     this.state = {
       albumTitle: '',
-      artist: ''
-    }
-  }
+      artist: '',
+      curator: Amanda
+    };
+  };
 
   randomAlbum() {
-    this.ralbum = Math.floor(Math.random() * Albums.length);
-    const newAlbumTitle = Albums[this.ralbum].albumTitle;
-    const newArtist = Albums[this.ralbum].artist;
+    this.randomize = Math.floor(Math.random() * this.state.curator.length);
+    const newAlbumTitle = this.state.curator[this.randomize].albumTitle;
+    const newArtist = this.state.curator[this.randomize].artist;
     this.setState({
       albumTitle: newAlbumTitle,
       artist: newArtist
     });
+  }
+
+  changeCurator() {
+    if (this.state.curator === Amanda) {
+      return this.setState({
+        curator: Andrei
+      });
+    }
+    if (this.state.curator === Andrei) {
+      return this.setState({
+        curator: Amanda
+      });
+    }
   }
 
   render() {
@@ -36,6 +53,13 @@ class App extends Component {
             className="button"
           >
             Randomize!
+          </button>
+          <br />
+          <button
+            onClick={() => this.changeCurator()}
+            className="button"
+          >
+            Change Curator
           </button>
         </div>
       </div>
