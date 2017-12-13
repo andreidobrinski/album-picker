@@ -1,17 +1,6 @@
 import React, { Component } from 'react';
+import Albums from './albums';
 import './App.css';
-
-const albums = [
-  {albumTitle: "By The Way",
-  artist: "Red Hot Chili Peppers"
-  },
-  {albumTitle: "Illmatic",
-  artist: "Nas"
-  },
-  {albumTitle: "In Return",
-  artist: "Odesza"
-  }
-  ];
 
 class App extends Component {
   constructor(props) {
@@ -24,9 +13,9 @@ class App extends Component {
   }
 
   randomAlbum() {
-    this.ralbum = Math.floor(Math.random() * albums.length);
-    const newAlbumTitle = albums[this.ralbum].albumTitle;
-    const newArtist = albums[this.ralbum].artist;
+    this.ralbum = Math.floor(Math.random() * Albums.length);
+    const newAlbumTitle = Albums[this.ralbum].albumTitle;
+    const newArtist = Albums[this.ralbum].artist;
     this.setState({
       albumTitle: newAlbumTitle,
       artist: newArtist
