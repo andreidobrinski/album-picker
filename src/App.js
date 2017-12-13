@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Albums from './albums';
+import Labels from './components/labels';
 import './App.css';
 
 class App extends Component {
@@ -7,8 +8,8 @@ class App extends Component {
     super();
     this.randomAlbum = this.randomAlbum.bind(this);
     this.state = {
-      albumTitle: "",
-      artist: ""
+      albumTitle: '',
+      artist: ''
     }
   }
 
@@ -26,14 +27,10 @@ class App extends Component {
     return (
       <div className="App">
         <div className="view">
-          <div className="label-box">
-            <p className="label-text">
-              {this.state.albumTitle}
-            </p>
-            <p className="label-text">
-              {this.state.artist}
-            </p>
-          </div>
+          <Labels
+            albumTitle={this.state.albumTitle}
+            artist={this.state.artist}
+          />
           <button
             onClick={() => this.randomAlbum()}
             className="button"
