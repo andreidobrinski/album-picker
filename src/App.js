@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Andrei from './andrei';
-import Amanda from './amanda';
+import Andrei from './curators/andrei';
+import Amanda from './curators/amanda';
 import Labels from './components/labels';
 import CuratorLabel from './components/curator-label';
 import './App.css';
