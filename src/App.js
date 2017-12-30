@@ -61,6 +61,7 @@ class App extends Component {
           >
             Change Curator
           </button>
+          <CuratorLabel curator={this.state.curator} />
         </div>
       </div>
     );
