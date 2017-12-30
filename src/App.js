@@ -8,8 +8,8 @@ import './App.css';
 class App extends Component {
   constructor(props) {
     super();
-    this.randomAlbum = this.randomAlbum.bind(this);
-    this.changeCurator - this.changeCurator.bind(this);
+    this.pickRandomAlbum = this.pickRandomAlbum.bind(this);
+    this.changeCurator = this.changeCurator.bind(this);
     this.state = {
       albumTitle: '',
       artist: '',
@@ -17,10 +17,11 @@ class App extends Component {
     };
   };
 
-  randomAlbum() {
-    this.randomize = Math.floor(Math.random() * this.state.curator.length);
-    const newAlbumTitle = this.state.curator[this.randomize].albumTitle;
-    const newArtist = this.state.curator[this.randomize].artist;
+  pickRandomAlbum() {
+    let albumList = this.state.curator.albumList
+    this.randomize = Math.floor(Math.random() * albumList.length);
+    const newAlbumTitle = albumList[this.randomize].albumTitle;
+    const newArtist = albumList[this.randomize].artist;
     this.setState({
       albumTitle: newAlbumTitle,
       artist: newArtist
@@ -49,7 +50,7 @@ class App extends Component {
             artist={this.state.artist}
           />
           <button
-            onClick={() => this.randomAlbum()}
+            onClick={() => this.pickRandomAlbum()}
             className="button"
           >
             Randomize!
