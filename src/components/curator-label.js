@@ -5,7 +5,7 @@ const CuratorLabel = ({ curator }) => {
   return (
     <div className="label-box">
       <p className="label-text">
-        {curator}
+        {curator.name}
       </p>
     </div>
   );
