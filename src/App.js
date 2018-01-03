@@ -19,9 +19,9 @@ class App extends Component {
 
   pickRandomAlbum() {
     let albumList = this.state.curator.albumList
-    this.randomize = Math.floor(Math.random() * albumList.length);
-    const newAlbumTitle = albumList[this.randomize].albumTitle;
-    const newArtist = albumList[this.randomize].artist;
+    const randomize = Math.floor(Math.random() * albumList.length);
+    const newAlbumTitle = albumList[randomize].albumTitle;
+    const newArtist = albumList[randomize].artist;
     this.setState({
       albumTitle: newAlbumTitle,
       artist: newArtist
