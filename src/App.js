@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Andrei from './curators/andrei';
 import Amanda from './curators/amanda';
-import Labels from './components/labels';
-import CuratorLabel from './components/curator-label';
+import Labels from './components/labels/labels';
+import CuratorLabel from './components/labels/curator-label';
+import { View, RandomizeButton } from './styled';
 import './App.css';
 
 class App extends Component {
@@ -44,26 +45,24 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="view">
+        <View>
           <Labels
             albumTitle={this.state.albumTitle}
             artist={this.state.artist}
           />
-          <button
+          <RandomizeButton
             onClick={() => this.pickRandomAlbum()}
-            className="button"
           >
             Randomize!
-          </button>
+          </RandomizeButton>
           <br />
-          <button
+          <RandomizeButton
             onClick={() => this.changeCurator()}
-            className="button"
           >
             Change Curator
-          </button>
+          </RandomizeButton>
           <CuratorLabel curator={this.state.curator} />
-        </div>
+        </View>
       </div>
     );
   }
