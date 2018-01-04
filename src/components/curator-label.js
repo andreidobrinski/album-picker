@@ -1,13 +1,14 @@
 import React from 'react';
+import { Wrapper, Text } from './styled';
 import '../App.css';
 
 const CuratorLabel = ({ curator }) => {
   return (
-    <div className="label-box">
-      <p className="label-text">
+    <Wrapper>
+      <Text>
         {curator.name}
-      </p>
-    </div>
+      </Text>
+    </Wrapper>
   );
 };
 
