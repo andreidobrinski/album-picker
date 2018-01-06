@@ -1,16 +1,16 @@
 import React from 'react';
-import '../App.css';
+import { Wrapper, Text } from './styled';
 
 const Labels = ({ albumTitle, artist }) => {
   return (
-    <div className="label-box">
-      <p className="label-text">
+    <Wrapper>
+      <Text>
         {albumTitle}
-      </p>
-      <p className="label-text">
+      </Text>
+      <Text>
         {artist}
-      </p>
-    </div>
+      </Text>
+    </Wrapper>
   );
 };
 
