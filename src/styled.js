@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const AppBG = styled.div`
+  text-align: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom right, ${props => props.theme.colours.support}, ${props => props.theme.colours.main});
+`;
+
 export const View = styled.div`
   margin: 0 auto;
   display: inline-block;

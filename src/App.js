@@ -44,7 +44,6 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
         <View>
           <Labels
             albumTitle={this.state.albumTitle}
@@ -63,7 +62,8 @@ class App extends Component {
           </RandomizeButton>
           <CuratorLabel curator={this.state.curator} />
         </View>
-      </div>
+        <AppBG>
+        </AppBG>
     );
   }
 }
