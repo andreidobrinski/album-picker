@@ -5,7 +5,7 @@ const CuratorLabel = ({ curator }) => {
   return (
     <Wrapper>
       <Text>
-        {curator.name}
+        {curator.name}'s list
       </Text>
     </Wrapper>
   );

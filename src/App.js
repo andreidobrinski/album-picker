@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { ThemeProvider } from 'styled-components';
+import theme from './theme';
 import Andrei from './curators/andrei';
 import Amanda from './curators/amanda';
 import Labels from './components/labels/labels';
 import CuratorLabel from './components/labels/curator-label';
-import { View, RandomizeButton } from './styled';
+import { AppBG, View, RandomizeButton, CuratorButton } from './styled';
 import './App.css';
 
 class App extends Component {
@@ -44,26 +46,28 @@ class App extends Component {
 
   render() {
     return (
-        <View>
-          <Labels
-            albumTitle={this.state.albumTitle}
-            artist={this.state.artist}
-          />
-          <RandomizeButton
-            onClick={() => this.pickRandomAlbum()}
-          >
-            Randomize!
-          </RandomizeButton>
-          <br />
-          <RandomizeButton
-            onClick={() => this.changeCurator()}
-          >
-            Change Curator
-          </RandomizeButton>
-          <CuratorLabel curator={this.state.curator} />
-        </View>
+      <ThemeProvider theme={theme}>
         <AppBG>
+          <View>
+            <Labels
+              albumTitle={this.state.albumTitle}
+              artist={this.state.artist}
+            />
+            <RandomizeButton
+              onClick={() => this.pickRandomAlbum()}
+            >
+              Randomize!
+            </RandomizeButton>
+            <br />
+            <CuratorLabel curator={this.state.curator} />
+            <CuratorButton
+              onClick={() => this.changeCurator()}
+            >
+              Change Curator
+            </CuratorButton>
+          </View>
         </AppBG>
+      </ThemeProvider>
     );
   }
 }

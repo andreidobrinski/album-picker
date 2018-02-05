@@ -1,10 +1,23 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 16px;
+`;
+
+export const LabelsWrapper = styled.div`
+  font-family: ${props => props.theme.fonts.raleway};
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  padding: 24px 32px;
 `;
 
 export const Text = styled.p`
+  font-family: ${props => props.theme.fonts.raleway};
   font-size: 2em;
-  color: #1768FF;
+  color: ${props => props.theme.colours.text};
+`;
+
+export const BolderLabelText = Text.extend`
+  font-weight: bold;
 `;

@@ -15,14 +15,16 @@ export const View = styled.div`
 `;
 
 export const RandomizeButton = styled.button`
-  margin-top: 32px;
+  font-family: ${props => props.theme.fonts.raleway};
+  margin-top: 16px;
+  margin-bottom: 32px;
   padding: 16px 58px 16px 58px;
-  background-color: #1597E8;
-  border-color: #1597E8;
+  background-color: ${props => props.theme.colours.cta};
+  border-color: ${props => props.theme.colours.cta};
   border-style: solid;
   border-radius: 12px;
   font-size: 1.5em;
-  color: #FFFFFF;
+  color: ${props => props.theme.colours.support};
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
   transition:all 0.5s ease;
 
@@ -31,10 +33,25 @@ export const RandomizeButton = styled.button`
   }
 
   :hover {
-    background-color: #3CDCFF;
-    border-color: #3CDCFF;
+    background-color: ${props => props.theme.colours.support};
+    border-color: ${props => props.theme.colours.support};
     border-radius: 12px;
-    color: #0E6AA2;
+    color: ${props => props.theme.colours.cta};
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.5);
+  }
+`;
+
+export const CuratorButton = styled.button`
+  font-family: ${props => props.theme.fonts.raleway};
+  padding: 16px 58px 16px 58px;
+  border-color: ${props => props.theme.colours.cta};
+  border-style: none;
+  border-radius: 12px;
+  font-size: 1.5em;
+  color: ${props => props.theme.colours.text};
+  background-color: rgba(255, 255, 255, 0.5);
+
+  :focus {
+    outline-style: none;
   }
 `;

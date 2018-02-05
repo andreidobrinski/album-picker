@@ -1,16 +1,16 @@
 import React from 'react';
-import { Wrapper, Text } from './styled';
+import { LabelsWrapper, Text, BolderLabelText } from './styled';
 
 const Labels = ({ albumTitle, artist }) => {
   return (
-    <Wrapper>
+    <LabelsWrapper>
       <Text>
         {albumTitle}
       </Text>
-      <Text>
+      <BolderLabelText>
         {artist}
-      </Text>
-    </Wrapper>
+      </BolderLabelText>
+    </LabelsWrapper>
   );
 };
 
