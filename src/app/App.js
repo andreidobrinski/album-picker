@@ -9,37 +9,32 @@ import { AppBG, View, RandomizeButton, CuratorButton } from './styled';
 import './App.css';
 
 class App extends Component {
-  constructor(props) {
-    super();
-    this.pickRandomAlbum = this.pickRandomAlbum.bind(this);
-    this.changeCurator = this.changeCurator.bind(this);
-    this.state = {
-      albumTitle: '',
-      artist: '',
-      curator: Amanda
-    };
+  state = {
+    albumTitle: '',
+    artist: '',
+    curator: Amanda,
   };
 
-  pickRandomAlbum() {
-    let albumList = this.state.curator.albumList
+  pickRandomAlbum = () => {
+    const { albumList } = this.state.curator;
     const randomize = Math.floor(Math.random() * albumList.length);
     const newAlbumTitle = albumList[randomize].albumTitle;
     const newArtist = albumList[randomize].artist;
     this.setState({
       albumTitle: newAlbumTitle,
-      artist: newArtist
+      artist: newArtist,
     });
   }
 
-  changeCurator() {
+  changeCurator = () => {
     if (this.state.curator === Amanda) {
       return this.setState({
-        curator: Andrei
+        curator: Andrei,
       });
     }
     if (this.state.curator === Andrei) {
       return this.setState({
-        curator: Amanda
+        curator: Amanda,
       });
     }
   }
