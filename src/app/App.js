@@ -5,6 +5,7 @@ import Andrei from '../curators/andrei';
 import Amanda from '../curators/amanda';
 import Labels from '../components/labels/labels';
 import CuratorLabel from '../components/labels/curator-label';
+import Vinyl from '../components/vinyl';
 import { AppBG, View, RandomizeButton, CuratorButton } from './styled';
 import './App.css';
 
@@ -51,7 +52,7 @@ class App extends Component {
             <RandomizeButton
               onClick={() => this.pickRandomAlbum()}
             >
-              Randomize!
+              <Vinyl />
             </RandomizeButton>
             <br />
             <CuratorLabel curator={this.state.curator} />

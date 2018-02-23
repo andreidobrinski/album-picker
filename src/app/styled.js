@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { VinylSvg } from '../components/vinyl/styled';
+
 
 export const AppBG = styled.div`
   text-align: center;
@@ -10,19 +12,28 @@ export const AppBG = styled.div`
 
 export const View = styled.div`
   margin: 0 auto;
-  display: inline-block;
-  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
 `;
 
 export const RandomizeButton = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: ${props => props.theme.fonts.raleway};
+  width: 160px;
+  height: 160px;
   margin-top: 16px;
   margin-bottom: 32px;
-  padding: 16px 58px 16px 58px;
+  padding: 8px 8px;
   background-color: ${props => props.theme.colours.cta};
   border-color: ${props => props.theme.colours.cta};
   border-style: solid;
-  border-radius: 12px;
+  border-radius: 50%;
   font-size: 1.5em;
   color: ${props => props.theme.colours.support};
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
@@ -35,9 +46,14 @@ export const RandomizeButton = styled.button`
   :hover {
     background-color: ${props => props.theme.colours.support};
     border-color: ${props => props.theme.colours.support};
-    border-radius: 12px;
     color: ${props => props.theme.colours.cta};
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  &:hover ${VinylSvg} {
+    .all {
+      stroke: ${props => props.theme.colours.cta};
+    }
   }
 `;
 
