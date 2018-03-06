@@ -1,8 +1,8 @@
 import React from 'react';
-import { ImgWrap, VinylSvg } from './styled';
+import { VinylSvg } from './styled';
 
 const Vinyl = () => (
-  <VinylSvg width="500" height="500" viewBox="0 0 500 500" className="all">
+  <VinylSvg width="160" height="160" viewBox="0 0 500 500" className="all">
     <circle cx="250" cy="250" r="220" className="all outer" />
     <circle cx="250" cy="250" r="68.1" className="all inner" />
     <circle cx="250" cy="250" r="8.5" className="all inner" />

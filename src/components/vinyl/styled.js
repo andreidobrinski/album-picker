@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const ImgWrap = styled.img`
-  height: 60px;
-  width: 60px;
-
-  &:hover {
-    stroke: ${props => props.theme.colours.cta};
-  }
-`;
-
 export const VinylSvg = styled.svg`
   .all {
     fill: none;
