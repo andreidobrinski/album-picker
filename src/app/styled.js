@@ -4,8 +4,8 @@ import { VinylSvg } from '../components/vinyl/styled';
 
 export const AppBG = styled.div`
   text-align: center;
-  position: absolute;
-  height: 100%;
+  display: flex;
+  height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom right, ${props => props.theme.colours.support}, ${props => props.theme.colours.main});
 `;
@@ -16,7 +16,7 @@ export const View = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 64px;
+  margin-top: 16px;
 `;
 
 export const RandomizeButton = styled.button`
