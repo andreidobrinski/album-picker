@@ -2,7 +2,7 @@
   "name": "album-picker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andreidobrinski.github.io/album-picker"
+  "homepage": "https://andreidobrinski.github.io/album-picker",
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^15.6.1",
