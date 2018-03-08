@@ -44,6 +44,7 @@ class App extends Component {
         curator: Amanda,
       });
     }
+    return false;
   }
 
   render() {
