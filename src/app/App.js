@@ -15,6 +15,14 @@ class App extends Component {
     curator: Amanda,
   };
 
+  getCuratorFromUrl = () => {
+    const url = window.location.href;
+    if (url.includes('amanda')) return Amanda;
+    if (url.includes('andrei')) return Andrei;
+    if (url.includes('aaron')) return Aaron;
+    return false;
+  };
+
   pickRandomAlbum = () => {
     const { albumList } = this.state.curator;
     const randomize = Math.floor(Math.random() * albumList.length);
