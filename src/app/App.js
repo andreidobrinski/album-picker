@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { ThemeProvider } from 'styled-components';
-import theme from './theme';
 import Andrei from '../curators/andrei';
 import Amanda from '../curators/amanda';
 import Aaron from '../curators/aaron';
@@ -49,28 +47,26 @@ class App extends Component {
 
   render() {
     return (
-      <ThemeProvider theme={theme}>
-        <AppBG>
-          <View>
-            <Labels
-              albumTitle={this.state.albumTitle}
-              artist={this.state.artist}
-            />
-            <RandomizeButton
-              onClick={() => this.pickRandomAlbum()}
-            >
-              <Vinyl />
-            </RandomizeButton>
-            <br />
-            <CuratorLabel curator={this.state.curator} />
-            <CuratorButton
-              onClick={() => this.changeCurator()}
-            >
-              Change Curator
-            </CuratorButton>
-          </View>
-        </AppBG>
-      </ThemeProvider>
+      <AppBG>
+        <View>
+          <Labels
+            albumTitle={this.state.albumTitle}
+            artist={this.state.artist}
+          />
+          <RandomizeButton
+            onClick={() => this.pickRandomAlbum()}
+          >
+            <Vinyl />
+          </RandomizeButton>
+          <br />
+          <CuratorLabel curator={this.state.curator} />
+          <CuratorButton
+            onClick={() => this.changeCurator()}
+          >
+            Change Curator
+          </CuratorButton>
+        </View>
+      </AppBG>
     );
   }
 }
