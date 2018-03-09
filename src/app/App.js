@@ -15,6 +15,12 @@ class App extends Component {
     curator: Amanda,
   };
 
+  componentWillMount() {
+    this.setState({
+      curator: this.getCuratorFromUrl(),
+    });
+  }
+
   getCuratorFromUrl = () => {
     const url = window.location.href;
     if (url.includes('amanda')) return Amanda;
