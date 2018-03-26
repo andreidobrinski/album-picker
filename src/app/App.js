@@ -26,7 +26,7 @@ class App extends Component {
     if (url.includes('amanda')) return Amanda;
     if (url.includes('andrei')) return Andrei;
     if (url.includes('aaron')) return Aaron;
-    return false;
+    return Amanda;
   };
 
   pickRandomAlbum = () => {
