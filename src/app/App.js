@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Andrei from '../curators/andrei';
 import Amanda from '../curators/amanda';
 import Aaron from '../curators/aaron';
-import { getAlbum, getAlbumListLength } from './api';
 import Labels from '../components/labels/labels';
 import CuratorLabel from '../components/labels/curator-label';
 import Vinyl from '../components/vinyl';
