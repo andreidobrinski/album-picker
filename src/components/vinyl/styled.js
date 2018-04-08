@@ -19,3 +19,5 @@ export const VinylSvg = styled.svg`
     stroke-width: 5px;
   }
 `;
+
+export default VinylSvg;
