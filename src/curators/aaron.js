@@ -5,7 +5,14 @@ const Aaron = {
       albumTitle: 'Blue Album',
       artist: 'Weezer',
     },
-    // Add your albums here
+    {
+      albumTitle: 'Baralku',
+      artist: 'Emancipator',
+    },
+    {
+      albumTitle: 'Sour Soul',
+      artist: 'BBNG & Ghostface Killah',
+    },
   ],
 };
 
