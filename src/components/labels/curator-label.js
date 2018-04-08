@@ -5,13 +5,17 @@ import { Wrapper, Text } from './styled';
 const CuratorLabel = ({ curator }) => (
   <Wrapper>
     <Text>
-      {curator.name}&apos;s list
+      {curator === 1 && 'Andrei'}
+      {curator === 2 && 'Amanda'}
+      {curator === 3 && 'Aaron'}
+      {curator === 4 && 'Kathleen and Kyle'}
+      &apos;s list
     </Text>
   </Wrapper>
 );
 
 CuratorLabel.propTypes = {
-  curator: PropTypes.shape({}).isRequired,
+  curator: PropTypes.number.isRequired,
 };
 
 export default CuratorLabel;
