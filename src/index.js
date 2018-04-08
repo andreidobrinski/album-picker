@@ -11,9 +11,10 @@ const app = () => (
   <ThemeProvider theme={theme}>
     <Router>
       <Switch>
-        <Route path="/amanda" component={App} />
         <Route path="/andrei" component={App} />
+        <Route path="/amanda" component={App} />
         <Route path="/aaron" component={App} />
+        <Route path="/kathleenkyle" component={App} />
         <Route path="/" component={App} />
       </Switch>
     </Router>
