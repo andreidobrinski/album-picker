@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import Andrei from '../curators/andrei';
-import Amanda from '../curators/amanda';
-import Aaron from '../curators/aaron';
 import { getAlbum, getAlbumListLength } from './api';
 import Labels from '../components/labels/labels';
 import CuratorLabel from '../components/labels/curator-label';
 import Vinyl from '../components/vinyl';
-import { AppBG, View, RandomizeButton, CuratorButton } from './styled';
+import { AppBG, View, RandomizeButton } from './styled';
 import './App.css';
 
 class App extends Component {
   state = {
     albumTitle: '',
     artist: '',
-    curator: Amanda,
+    curator: 1,
+    albumListLength: 0,
   };
 
   componentWillMount() {
@@ -22,42 +20,28 @@ class App extends Component {
     });
   }
 
+  componentDidMount() {
+    getAlbumListLength(this.state.curator)
+      .then(response => this.setState({ albumListLength: response }));
+  }
+
   getCuratorFromUrl = () => {
     const url = window.location.href;
-    if (url.includes('amanda')) return Amanda;
-    if (url.includes('andrei')) return Andrei;
-    if (url.includes('aaron')) return Aaron;
-    return Amanda;
+    if (url.includes('andrei')) return 1;
+    if (url.includes('amanda')) return 2;
+    if (url.includes('aaron')) return 3;
+    if (url.includes('kathleenkyle')) return 4;
+    return 1;
   };
 
   pickRandomAlbum = () => {
-    const { albumList } = this.state.curator;
-    const randomize = Math.floor(Math.random() * albumList.length);
-    const newAlbumTitle = albumList[randomize].albumTitle;
-    const newArtist = albumList[randomize].artist;
-    this.setState({
-      albumTitle: newAlbumTitle,
-      artist: newArtist,
-    });
-  }
-
-  changeCurator = () => {
-    if (this.state.curator === Amanda) {
-      return this.setState({
-        curator: Andrei,
-      });
-    }
-    if (this.state.curator === Andrei) {
-      return this.setState({
-        curator: Aaron,
-      });
-    }
-    if (this.state.curator === Aaron) {
-      return this.setState({
-        curator: Amanda,
-      });
-    }
-    return false;
+    const albumList = this.state.albumListLength;
+    const albumRow = Math.floor(Math.random() * (albumList));
+    getAlbum(this.state.curator, albumRow)
+      .then(response => this.setState({
+        albumTitle: response.newAlbumTitle,
+        artist: response.newArtist,
+      }));
   }
 
   render() {
@@ -75,11 +59,6 @@ class App extends Component {
           </RandomizeButton>
           <br />
           <CuratorLabel curator={this.state.curator} />
-          <CuratorButton
-            onClick={() => this.changeCurator()}
-          >
-            Change Curator
-          </CuratorButton>
         </View>
       </AppBG>
     );
