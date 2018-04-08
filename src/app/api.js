@@ -9,9 +9,9 @@ export const getAlbum = (curator, albumRow) => (
           status: response.status,
         }))
         .then((res) => {
-          const newArtist = res.data.rows[albumRow].artist;
           const newAlbumTitle = res.data.rows[albumRow].albumtitle;
-          return { newArtist, newAlbumTitle };
+          const newArtist = res.data.rows[albumRow].artist;
+          return { newAlbumTitle, newArtist };
         }))
 );
 
@@ -24,7 +24,7 @@ export const getAlbumListLength = curator => (
           status: response.status,
         }))
         .then((res) => {
-          const albumListLength = res.data.rows.length;
-          return albumListLength;
+          const newAlbumListLength = res.data.rows.length;
+          return newAlbumListLength;
         }))
 );
