@@ -22,7 +22,9 @@ class App extends Component {
 
   componentDidMount() {
     getAlbumListLength(this.state.curator)
-      .then(response => this.setState({ albumListLength: response }));
+      .then(response => this.setState({
+        albumListLength: response.newAlbumListLength,
+      }));
   }
 
   getCuratorFromUrl = () => {
