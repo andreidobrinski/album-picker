@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   getCuratorFromUrl = () => {
-    const url = window.location.href;
+    const url = window.location.pathname;
     if (url.includes('andrei')) return 1;
     if (url.includes('amanda')) return 2;
     if (url.includes('aaron')) return 3;
