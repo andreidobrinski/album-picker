@@ -5,31 +5,26 @@ import { VinylSvg } from '../components/vinyl/styled';
 export const AppBG = styled.div`
   text-align: center;
   display: flex;
-  height: 100vh;
-  width: 100%;
-  background: linear-gradient(to bottom right, ${props => props.theme.colours.support}, ${props => props.theme.colours.main});
-`;
-
-export const View = styled.div`
   margin: 0 auto;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 16px;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom right, ${props => props.theme.colours.support}, ${props => props.theme.colours.main});
 `;
 
 export const RandomizeButton = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-self: center;
   align-items: center;
   font-family: ${props => props.theme.fonts.raleway};
   width: 160px;
   height: 160px;
-  margin-top: 16px;
-  margin-bottom: 32px;
-  padding: 8px 8px;
+  margin: 16px auto;
+  padding: 8px;
   background-color: ${props => props.theme.colours.cta};
   border-color: ${props => props.theme.colours.cta};
   border-style: solid;

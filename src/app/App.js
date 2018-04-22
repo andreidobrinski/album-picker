@@ -3,7 +3,7 @@ import { getAlbum, getAlbumListLength } from './api';
 import Labels from '../components/labels/labels';
 import CuratorLabel from '../components/labels/curator-label';
 import Vinyl from '../components/vinyl';
-import { AppBG, View, RandomizeButton } from './styled';
+import { AppBG, RandomizeButton } from './styled';
 
 class App extends Component {
   state = {
@@ -48,18 +48,16 @@ class App extends Component {
   render() {
     return (
       <AppBG>
-        <View>
-          <Labels
-            albumTitle={this.state.albumTitle}
-            artist={this.state.artist}
-          />
-          <RandomizeButton
-            onClick={() => this.pickRandomAlbum()}
-          >
-            <Vinyl />
-          </RandomizeButton>
-          <CuratorLabel curator={this.state.curator} />
-        </View>
+        <Labels
+          albumTitle={this.state.albumTitle}
+          artist={this.state.artist}
+        />
+        <RandomizeButton
+          onClick={() => this.pickRandomAlbum()}
+        >
+          <Vinyl />
+        </RandomizeButton>
+        <CuratorLabel curator={this.state.curator} />
       </AppBG>
     );
   }
