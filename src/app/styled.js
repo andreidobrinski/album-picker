@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { VinylSvg } from '../components/vinyl/styled';
 
-
 export const AppBG = styled.div`
   text-align: center;
   display: flex;
   margin: 0 auto;
+  padding-top: 16px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -23,22 +23,21 @@ export const RandomizeButton = styled.button`
   font-family: ${props => props.theme.fonts.raleway};
   width: 160px;
   height: 160px;
-  margin: 16px auto;
+  margin: 16px auto 0px auto;
   padding: 8px;
   background-color: ${props => props.theme.colours.cta};
   border-color: ${props => props.theme.colours.cta};
   border-style: solid;
   border-radius: 50%;
-  font-size: 1.5em;
   color: ${props => props.theme.colours.support};
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
   transition:all 0.5s ease;
 
-  :focus {
+  &:focus {
     outline-style: none;
   }
 
-  :hover {
+  &:hover {
     background-color: ${props => props.theme.colours.support};
     border-color: ${props => props.theme.colours.support};
     color: ${props => props.theme.colours.cta};
