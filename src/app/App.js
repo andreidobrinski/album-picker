@@ -7,7 +7,7 @@ import { AppBG, RandomizeButton } from './styled';
 
 class App extends Component {
   state = {
-    albumTitle: '',
+    albumTitle: 'Tap below to choose an album',
     artist: '',
     curator: 1,
     albumListLength: 0,
