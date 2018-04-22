@@ -51,18 +51,3 @@ export const RandomizeButton = styled.button`
     }
   }
 `;
-
-export const CuratorButton = styled.button`
-  font-family: ${props => props.theme.fonts.raleway};
-  padding: 16px 58px 16px 58px;
-  border-color: ${props => props.theme.colours.cta};
-  border-style: none;
-  border-radius: 12px;
-  font-size: 1.5em;
-  color: ${props => props.theme.colours.text};
-  background-color: rgba(255, 255, 255, 0.5);
-
-  :focus {
-    outline-style: none;
-  }
-`;
