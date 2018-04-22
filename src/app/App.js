@@ -58,7 +58,6 @@ class App extends Component {
           >
             <Vinyl />
           </RandomizeButton>
-          <br />
           <CuratorLabel curator={this.state.curator} />
         </View>
       </AppBG>
