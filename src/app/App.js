@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { getAlbum, getAlbumListLength } from './api';
-import Labels from '../components/labels/labels';
-import CuratorLabel from '../components/labels/curator-label';
-import Vinyl from '../components/vinyl';
+import Labels from './labels/labels';
+import CuratorLabel from './labels/curator-label';
+import Vinyl from './vinyl-svg';
 import { AppBG, RandomizeButton } from './styled';
 
 class App extends Component {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { VinylSvg } from '../components/vinyl/styled';
+import { VinylSvg } from './vinyl-svg/styled';
 
 export const AppBG = styled.div`
   text-align: center;
