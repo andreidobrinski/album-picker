@@ -36,8 +36,8 @@ class App extends Component {
   };
 
   pickRandomAlbum = () => {
-    const albumList = this.state.albumListLength;
-    const albumRow = Math.floor(Math.random() * (albumList));
+    const { albumListLength } = this.state;
+    const albumRow = Math.floor(Math.random() * (albumListLength));
     getAlbum(this.state.curator, albumRow)
       .then(response => this.setState({
         albumTitle: response.newAlbumTitle,
