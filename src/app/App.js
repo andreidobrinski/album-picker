@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { getAlbum, getAlbumListLength } from './api';
 import Labels from '../components/labels/labels';
 import CuratorLabel from '../components/labels/curator-label';
@@ -27,7 +28,7 @@ class App extends Component {
   }
 
   getCuratorFromUrl = () => {
-    const url = window.location.pathname;
+    const url = this.props.location.pathname;
     if (url.includes('andrei')) return 1;
     if (url.includes('amanda')) return 2;
     if (url.includes('aaron')) return 3;
@@ -62,5 +63,11 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
+};
 
 export default App;
