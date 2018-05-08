@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { LabelsWrapper, Text, BolderLabelText } from './styled';
+import { LabelsWrapper, Text, BolderText } from './styled';
 
 const Labels = ({ albumTitle, artist }) => (
   <LabelsWrapper>
     <Text>
       {albumTitle}
     </Text>
-    <BolderLabelText>
+    <BolderText>
       {artist}
-    </BolderLabelText>
+    </BolderText>
   </LabelsWrapper>
 );
 

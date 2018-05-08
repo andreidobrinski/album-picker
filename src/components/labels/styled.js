@@ -18,6 +18,6 @@ export const Text = styled.p`
   color: ${props => props.theme.colours.text};
 `;
 
-export const BolderLabelText = Text.extend`
+export const BolderText = Text.extend`
   font-weight: bold;
 `;
