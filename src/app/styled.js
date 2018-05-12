@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { VinylSvg } from './vinyl-svg/styled';
 
 export const AppBG = styled.div`
@@ -12,6 +13,21 @@ export const AppBG = styled.div`
   height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom right, ${props => props.theme.colours.support}, ${props => props.theme.colours.main});
+`;
+
+export const CuratorsWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+`;
+
+export const CuratorLink = styled(Link)`
+  text-decoration: none;
+  color: ${props => props.theme.colours.cta};
+  border: 1px solid ${props => props.theme.colours.cta};
+  border-radius: 12px;
+  padding: 0px 32px;
+  margin: 16px;
 `;
 
 export const RandomizeButton = styled.button`

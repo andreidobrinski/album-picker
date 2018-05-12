@@ -21,3 +21,10 @@ export const Text = styled.p`
 export const BolderText = Text.extend`
   font-weight: bold;
 `;
+
+export const SmallerText = Text.extend`
+  font-size: 1em;
+  margin: 16px;
+  line-height: 1.618em;
+  max-width: 600px;
+`;
