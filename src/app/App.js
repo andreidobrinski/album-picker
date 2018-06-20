@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { getAlbum, getAlbumListLength } from './api';
+import Curators from './curators';
 import Labels from './labels/labels';
 import CuratorLabel from './labels/curator-label';
 import Vinyl from './vinyl-svg';
@@ -10,7 +11,7 @@ class App extends Component {
   state = {
     albumTitle: 'Tap below to choose an album',
     artist: '',
-    curator: 1,
+    curator: Curators.andrei,
     albumListLength: 0,
   };
 
@@ -21,7 +22,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getAlbumListLength(this.state.curator)
+    getAlbumListLength(this.state.curator.id)
       .then(response => this.setState({
         albumListLength: response.newAlbumListLength,
       }));
@@ -39,7 +40,7 @@ class App extends Component {
   pickRandomAlbum = () => {
     const { albumListLength } = this.state;
     const albumRow = Math.floor(Math.random() * (albumListLength));
-    getAlbum(this.state.curator, albumRow)
+    getAlbum(this.state.curator.id, albumRow)
       .then(response => this.setState({
         albumTitle: response.newAlbumTitle,
         artist: response.newArtist,
