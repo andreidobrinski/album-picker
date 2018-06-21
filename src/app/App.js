@@ -8,17 +8,17 @@ import Vinyl from './vinyl-svg';
 import { AppBG, RandomizeButton } from './styled';
 
 class App extends Component {
-  state = {
-    albumTitle: 'Tap below to choose an album',
-    artist: '',
-    curator: Curators.andrei,
-    albumListLength: 0,
-  };
+  state = this.getInitialState();
 
-  componentWillMount() {
-    this.setState({
-      curator: Curators[this.getCuratorNameFromUrl()],
-    });
+  getInitialState() {
+    const url = this.props.location.pathname;
+    const curatorNameFromUrl = url.replace(/\//gi, '');
+    return {
+      albumTitle: 'Tap below to choose an album',
+      artist: '',
+      curator: Curators[curatorNameFromUrl],
+      albumListLength: 0,
+    };
   }
 
   componentDidMount() {
@@ -27,12 +27,6 @@ class App extends Component {
         albumListLength: response.newAlbumListLength,
       }));
   }
-
-  getCuratorNameFromUrl = () => {
-    const url = this.props.location.pathname;
-    const curatorName = url.replace(/\//gi, '');
-    return curatorName;
-  };
 
   pickRandomAlbum = () => {
     const { albumListLength } = this.state;
