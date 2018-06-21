@@ -17,7 +17,7 @@ class App extends Component {
 
   componentWillMount() {
     this.setState({
-      curator: this.getCuratorFromUrl(),
+      curator: Curators[this.getCuratorNameFromUrl()],
     });
   }
 
@@ -28,13 +28,10 @@ class App extends Component {
       }));
   }
 
-  getCuratorFromUrl = () => {
+  getCuratorNameFromUrl = () => {
     const url = this.props.location.pathname;
-    if (url.includes('andrei')) return 1;
-    if (url.includes('amanda')) return 2;
-    if (url.includes('aaron')) return 3;
-    if (url.includes('kathleenkyle')) return 4;
-    return 1;
+    const curatorName = url.replace(/\//gi, '');
+    return curatorName;
   };
 
   pickRandomAlbum = () => {
