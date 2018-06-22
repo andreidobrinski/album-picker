@@ -66,3 +66,9 @@ export const RandomizeButton = styled.button`
     }
   }
 `;
+
+export const EmailButton = styled.button`
+  all: unset;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 0 0 black;
+`;
