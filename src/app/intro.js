@@ -2,6 +2,7 @@ import React from 'react';
 import GithubCorner from 'react-github-corner';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Tooltip } from 'react-tippy';
+import Curators from './curators';
 import { colours } from './theme';
 import { AppBG, CuratorsWrap, CuratorLink, EmailButton } from './styled';
 import { Text, SmallerText } from './labels/styled';
@@ -46,17 +47,25 @@ const Intro = () => (
       &nbsp;and I&apos;ll get you set up.
     </SmallerText>
     <CuratorsWrap>
-      <CuratorLink to="/andrei">
-        <SmallerText>Andrei</SmallerText>
+      <CuratorLink to={Curators.andrei.route}>
+        <SmallerText>
+          {Curators.andrei.name}
+        </SmallerText>
       </CuratorLink>
-      <CuratorLink to="/amanda">
-        <SmallerText>Amanda</SmallerText>
+      <CuratorLink to={Curators.amanda.route}>
+        <SmallerText>
+          {Curators.amanda.name}
+        </SmallerText>
       </CuratorLink>
-      <CuratorLink to="/aaron">
-        <SmallerText>Aaron</SmallerText>
+      <CuratorLink to={Curators.aaron.route}>
+        <SmallerText>
+          {Curators.aaron.name}
+        </SmallerText>
       </CuratorLink>
-      <CuratorLink to="/kathleenkyle">
-        <SmallerText>Kathleen and Kyle</SmallerText>
+      <CuratorLink to={Curators.kathleenKyle.route}>
+        <SmallerText>
+          {Curators.kathleenKyle.name}
+        </SmallerText>
       </CuratorLink>
     </CuratorsWrap>
   </AppBG>
