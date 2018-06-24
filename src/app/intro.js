@@ -4,7 +4,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { Tooltip } from 'react-tippy';
 import Curators from './curators';
 import { colours } from './theme';
-import { AppBG, CuratorsWrap, CuratorLink, EmailButton } from './styled';
+import { AppBG, CuratorsWrap, CuratorLink, EmailButton, Cta } from './styled';
 import { Text, SmallerText } from './labels/styled';
 
 const Intro = () => (
@@ -29,16 +29,26 @@ const Intro = () => (
       Tap your name below to go to your page.
       Save that page in your bookmarks for quick access.
     </SmallerText>
-    <SmallerText>
-      Want a list of your own?&nbsp;
-      <Tooltip
-        title="Email copied to clipboard"
-        trigger="click"
-        animation="scale"
-      >
-        <CopyToClipboard
-          text="dobrinski.andrei@gmail.com"
+    <Cta>
+      <SmallerText noMargin>
+        Want a list of your own?&nbsp;
+      </SmallerText>
+      <div style={{ display: 'flex' }}>
+        <Tooltip
+          title="Email copied to clipboard"
+          trigger="click"
+          animation="scale"
         >
+          <CopyToClipboard
+            text="dobrinski.andrei@gmail.com"
+          >
+            <EmailButton>
+              Send me an email
+            </EmailButton>
+          </CopyToClipboard>
+        </Tooltip>
+        <SmallerText noMargin>
+          &nbsp;and I&apos;ll get you set up.
         </SmallerText>
       </div>
     </Cta>

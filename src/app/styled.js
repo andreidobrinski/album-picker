@@ -13,12 +13,12 @@ export const AppBG = styled.div`
   height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom right, ${props => props.theme.colours.support}, ${props => props.theme.colours.main});
+  overflow-y: scroll;
 `;
 
 export const CuratorsWrap = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 `;
 
 export const CuratorLink = styled(Link)`
@@ -70,5 +70,17 @@ export const RandomizeButton = styled.button`
 export const EmailButton = styled.button`
   all: unset;
   cursor: pointer;
-  box-shadow: inset 0 -3px 0 0 black;
+  box-shadow: inset 0 -3px 0 0 ${props => props.theme.colours.cta};
+  font-size: 1em;
+  line-height: 1.618em;
+  font-family: ${props => props.theme.fonts.raleway};
+  color: ${props => props.theme.colours.text};
+`;
+
+export const Cta = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${props => props.theme.media.tablet`
+    flex-direction: row;
+  `};
 `;

@@ -27,4 +27,7 @@ export const SmallerText = Text.extend`
   margin: 16px;
   line-height: 1.618em;
   max-width: 600px;
+  ${props => props.noMargin && `
+    margin: 0;
+  `};
 `;
