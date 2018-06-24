@@ -39,34 +39,17 @@ const Intro = () => (
         <CopyToClipboard
           text="dobrinski.andrei@gmail.com"
         >
-          <EmailButton>
-            Send me an email
-          </EmailButton>
-        </CopyToClipboard>
-      </Tooltip>
-      &nbsp;and I&apos;ll get you set up.
-    </SmallerText>
+        </SmallerText>
+      </div>
+    </Cta>
     <CuratorsWrap>
-      <CuratorLink to={Curators.andrei.route}>
-        <SmallerText>
-          {Curators.andrei.name}
-        </SmallerText>
-      </CuratorLink>
-      <CuratorLink to={Curators.amanda.route}>
-        <SmallerText>
-          {Curators.amanda.name}
-        </SmallerText>
-      </CuratorLink>
-      <CuratorLink to={Curators.aaron.route}>
-        <SmallerText>
-          {Curators.aaron.name}
-        </SmallerText>
-      </CuratorLink>
-      <CuratorLink to={Curators.kathleenKyle.route}>
-        <SmallerText>
-          {Curators.kathleenKyle.name}
-        </SmallerText>
-      </CuratorLink>
+      {Object.keys(Curators).map(curator => (
+        <CuratorLink to={Curators[curator].route} key={curator}>
+          <SmallerText>
+            {Curators[curator].name}
+          </SmallerText>
+        </CuratorLink>
+      ))}
     </CuratorsWrap>
   </AppBG>
 );
