@@ -6,19 +6,23 @@ export const AppBG = styled.div`
   text-align: center;
   display: flex;
   margin: 0 auto;
-  padding-top: 16px;
+  padding-top: ${props => props.theme.spacer};
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
-  background: linear-gradient(to bottom right, ${props => props.theme.colours.support}, ${props => props.theme.colours.main});
+  background: linear-gradient(
+    to bottom right,
+    ${props => props.theme.colours.support},
+    ${props => props.theme.colours.main});
   overflow-y: scroll;
 `;
 
 export const CuratorsWrap = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: ${props => props.theme.spacer};
 `;
 
 export const CuratorLink = styled(Link)`
@@ -27,7 +31,7 @@ export const CuratorLink = styled(Link)`
   border: 1px solid ${props => props.theme.colours.cta};
   border-radius: 12px;
   padding: 0px 32px;
-  margin: 16px;
+  margin: ${props => props.theme.spacer};
 `;
 
 export const RandomizeButton = styled.button`
