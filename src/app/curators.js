@@ -23,6 +23,12 @@ const Curators = {
     name: 'Kathleen and Kyle',
     sheetId: 796619533,
   },
+  mike: {
+    id: 5,
+    route: '/mike',
+    name: 'Mike',
+    sheetId: 1185392937,
+  },
 };
 
 export default Curators;
