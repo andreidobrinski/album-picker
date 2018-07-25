@@ -27,7 +27,7 @@ export const colours = {
 };
 
 export const fonts = {
-  raleway: '"Raleway", sans-serif',
+  main: '"Oxygen", sans-serif',
 };
 
 export const spacer = '16px';

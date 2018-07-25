@@ -40,7 +40,7 @@ export const RandomizeButton = styled.button`
   justify-content: center;
   justify-self: center;
   align-items: center;
-  font-family: ${props => props.theme.fonts.raleway};
+  font-family: ${props => props.theme.fonts.main};
   width: 160px;
   height: 160px;
   margin: 16px auto 0px auto;
@@ -77,7 +77,7 @@ export const EmailButton = styled.button`
   box-shadow: inset 0 -3px 0 0 ${props => props.theme.colours.cta};
   font-size: 1em;
   line-height: 1.618em;
-  font-family: ${props => props.theme.fonts.raleway};
+  font-family: ${props => props.theme.fonts.main};
   color: ${props => props.theme.colours.text};
 `;
 

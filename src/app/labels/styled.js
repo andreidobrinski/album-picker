@@ -12,7 +12,7 @@ export const LabelsWrapper = styled.div`
 `;
 
 export const Text = styled.p`
-  font-family: ${props => props.theme.fonts.raleway};
+  font-family: ${props => props.theme.fonts.main};
   font-size: 2em;
   color: ${props => props.theme.colours.text};
 `;
