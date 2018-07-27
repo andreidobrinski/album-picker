@@ -12,7 +12,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 const app = () => (
   <ThemeProvider theme={theme}>
-    <Router>
+    <Router basename="/album-picker">
       <Switch>
         {Object.keys(Curators).map(curator => (
           <Route
