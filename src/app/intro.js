@@ -17,7 +17,7 @@ const Intro = () => (
       svgStyle={{ mixBlendMode: 'darken' }}
     />
     <Text>
-      Welcome to the Album Picker
+      Welcome to Album Picker
     </Text>
     <SmallerText>
       The idea is simple: add your record collection,
