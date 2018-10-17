@@ -17,11 +17,11 @@ export const Text = styled.p`
   color: ${props => props.theme.colours.text};
 `;
 
-export const BolderText = Text.extend`
+export const BolderText = styled(Text)`
   font-weight: bold;
 `;
 
-export const SmallerText = Text.extend`
+export const SmallerText = styled(Text)`
   font-size: 1em;
   margin: ${props => props.theme.spacer};
   line-height: 1.618em;
