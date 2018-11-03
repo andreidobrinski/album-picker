@@ -19,7 +19,8 @@ const CuratorLabel = ({ curator }) => {
         style={{ textDecoration: 'none' }}
       >
         <Text>
-          {curator.name}&apos;s list
+          {curator.name}
+          &apos;s list
         </Text>
       </a>
     </Wrapper>

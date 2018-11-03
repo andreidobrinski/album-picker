@@ -11,8 +11,8 @@ class App extends Component {
   state = this.getInitialState();
 
   getInitialState() {
-    const url = this.props.location.pathname;
-    const curatorNameFromUrl = url.replace(/\//gi, '');
+    const { location: { pathname } } = this.props;
+    const curatorNameFromUrl = pathname.replace(/\//gi, '');
     return {
       albumTitle: 'Tap below to choose an album',
       artist: '',
@@ -22,16 +22,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getAlbumListLength(this.state.curator.id)
+    const { curator } = this.state;
+    getAlbumListLength(curator.id)
       .then(response => this.setState({
         albumListLength: response.newAlbumListLength,
       }));
   }
 
   pickRandomAlbum = () => {
-    const { albumListLength } = this.state;
+    const { albumListLength, curator } = this.state;
     const albumRow = Math.floor(Math.random() * (albumListLength));
-    getAlbum(this.state.curator.id, albumRow)
+    getAlbum(curator.id, albumRow)
       .then(response => this.setState({
         albumTitle: response.newAlbumTitle,
         artist: response.newArtist,
@@ -39,18 +40,19 @@ class App extends Component {
   }
 
   render() {
+    const { albumTitle, artist, curator } = this.state;
     return (
       <AppBG>
         <Labels
-          albumTitle={this.state.albumTitle}
-          artist={this.state.artist}
+          albumTitle={albumTitle}
+          artist={artist}
         />
         <RandomizeButton
           onClick={() => this.pickRandomAlbum()}
         >
           <Vinyl />
         </RandomizeButton>
-        <CuratorLabel curator={this.state.curator} />
+        <CuratorLabel curator={curator} />
       </AppBG>
     );
   }

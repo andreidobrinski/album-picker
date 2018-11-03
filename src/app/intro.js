@@ -4,7 +4,9 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { Tooltip } from 'react-tippy';
 import Curators from './curators';
 import { colours } from './theme';
-import { AppBG, CuratorsWrap, CuratorLink, EmailButton, Cta } from './styled';
+import {
+  AppBG, CuratorsWrap, CuratorLink, EmailButton, Cta,
+} from './styled';
 import { Text, SmallerText } from './labels/styled';
 
 const Intro = () => (
