@@ -1,15 +1,17 @@
 {
-  "main.css": "/album-picker/static/css/main.6ee7a551.chunk.css",
-  "main.js": "/album-picker/static/js/main.7b306c7a.chunk.js",
-  "main.js.map": "/album-picker/static/js/main.7b306c7a.chunk.js.map",
-  "static/css/1.4eaec358.chunk.css": "/album-picker/static/css/1.4eaec358.chunk.css",
-  "static/js/1.0656d3e9.chunk.js": "/album-picker/static/js/1.0656d3e9.chunk.js",
-  "static/js/1.0656d3e9.chunk.js.map": "/album-picker/static/js/1.0656d3e9.chunk.js.map",
-  "runtime~main.js": "/album-picker/static/js/runtime~main.0d7b69a9.js",
-  "runtime~main.js.map": "/album-picker/static/js/runtime~main.0d7b69a9.js.map",
-  "static/css/1.4eaec358.chunk.css.map": "/album-picker/static/css/1.4eaec358.chunk.css.map",
-  "static/css/main.6ee7a551.chunk.css.map": "/album-picker/static/css/main.6ee7a551.chunk.css.map",
-  "index.html": "/album-picker/index.html",
-  "precache-manifest.a59f31d71503979991e350d002dce4f9.js": "/album-picker/precache-manifest.a59f31d71503979991e350d002dce4f9.js",
-  "service-worker.js": "/album-picker/service-worker.js"
+  "files": {
+    "main.css": "/album-picker/static/css/main.26bd4114.chunk.css",
+    "main.js": "/album-picker/static/js/main.ab083cba.chunk.js",
+    "main.js.map": "/album-picker/static/js/main.ab083cba.chunk.js.map",
+    "runtime~main.js": "/album-picker/static/js/runtime~main.9fb32d41.js",
+    "runtime~main.js.map": "/album-picker/static/js/runtime~main.9fb32d41.js.map",
+    "static/css/2.bcbd4ed0.chunk.css": "/album-picker/static/css/2.bcbd4ed0.chunk.css",
+    "static/js/2.260ed38c.chunk.js": "/album-picker/static/js/2.260ed38c.chunk.js",
+    "static/js/2.260ed38c.chunk.js.map": "/album-picker/static/js/2.260ed38c.chunk.js.map",
+    "index.html": "/album-picker/index.html",
+    "precache-manifest.a6776f0995f24ece3f9385033091e37a.js": "/album-picker/precache-manifest.a6776f0995f24ece3f9385033091e37a.js",
+    "service-worker.js": "/album-picker/service-worker.js",
+    "static/css/2.bcbd4ed0.chunk.css.map": "/album-picker/static/css/2.bcbd4ed0.chunk.css.map",
+    "static/css/main.26bd4114.chunk.css.map": "/album-picker/static/css/main.26bd4114.chunk.css.map"
+  }
 }
